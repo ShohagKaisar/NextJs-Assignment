@@ -27,7 +27,10 @@ const Navbar = async () => {
         <div>
           <ul className="flex justify-center items-center gap-4">
             {
-              user ? <li className=" border-2 px-2 py-1 rounded-xl"><LogoutLink>Log out</LogoutLink></li> : 
+              user ? <ul className="flex gap-4 items-center">
+                <li>{user.given_name}</li>
+                <li className=" border-2 px-2 py-1 rounded-xl"><LogoutLink>Log out</LogoutLink></li>
+              </ul> : 
               <ul className="flex gap-4"><li className=" border-2 px-2 py-1 rounded-xl"><LoginLink>Sign in</LoginLink></li>
             <li className=" border-2 px-2 py-1 rounded-xl"><RegisterLink>Sign up</RegisterLink></li></ul>
             }
